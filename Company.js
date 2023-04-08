@@ -11,25 +11,32 @@ class PayMoney {
 
 }
 
-const paym = new PayMoney();
-const money = paym.sumPrice();
-console.log(paym.sumPrice())
-let level;
-let giveVoucher;
-let specialOffer;
-//ตรวจสอบว่าจะได้ Give Voucher กับ Special Offer เท่าไหร่
-if (money < 1000) {
-    level = "Standard";
-    giveVoucher = 30;
-    specialOffer = 30;
-} else if (money >= 1000 && money <= 1200) {
-    level = "Luxury";
-    giveVoucher = 40;
-    specialOffer = 40;
-} else {
-    level = "Emerald";
-    giveVoucher = 50;
-    specialOffer = 50;
+class CusLevel {
+    chLevel(money) {
+        //ตรวจสอบว่าจะได้ Give Voucher กับ Special Offer เท่าไหร่
+        let level;
+        let giveVoucher;
+        let specialOffer;
+        if (money < 1000) {
+            level = "Standard";
+            giveVoucher = 30;
+            specialOffer = 30;
+        } else if (money >= 1000 && money <= 1200) {
+            level = "Luxury";
+            giveVoucher = 40;
+            specialOffer = 40;
+        } else {
+            level = "Emerald";
+            giveVoucher = 50;
+            specialOffer = 50;
+        }
+        let arr = [level, giveVoucher, specialOffer]
+        return arr;
+    }
 }
 
-console.log(level, giveVoucher, specialOffer);
+const paym = new PayMoney();
+const money = paym.sumPrice();
+const cusl = new CusLevel();
+console.log(money)
+console.log(cusl.chLevel(money));
