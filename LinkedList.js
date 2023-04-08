@@ -66,3 +66,4 @@ data.forEach((nodeData) => {
 
 console.log(linkedList.sumValues());
 
+//
