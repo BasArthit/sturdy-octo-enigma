@@ -14,6 +14,7 @@ class Animal {
     }
   }
 
+//คลาส Duck
   class Duck extends Animal{
     constructor(beakColor) {
         this.beakColor = beakColor;
@@ -26,6 +27,7 @@ class Animal {
       }
   }
 
+//คลาส Fish
   class Fish extends Animal{
     constructor(sizeInFeet) {
         this.sizeInFeet = sizeInFeet;
@@ -36,11 +38,12 @@ class Animal {
      
   }
 
-  class Fish extends Animal{
-    constructor(sizeInFeet) {
-        this.sizeInFeet = sizeInFeet;
+//คลาส Zebra
+  class Zebra extends Animal{
+    constructor(is_wild) {
+        this.is_wild = is_wild;
       }
-      canEat(){
+      run(){
         //คำสั่งในเมธอด
       }
      
