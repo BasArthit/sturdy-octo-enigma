@@ -1,28 +1,8 @@
-class ListNode{
-    constructor(data){
-        this.data = data;
-        this.next = null;
+class Node {
+    constructor(value, id, nextId) {
+      this.value = value;
+      this.id = id;
+      this.nextId = nextId;
     }
-}
-class LinkedList{
-    constructor(head = null){
-        this.head = head;
-    }
-
-    size(){
-        let count = 0;
-        let node = this.head;
-        while (node){
-            count++;
-            node = node.next;
-        }
-        return count;
-    }
-}
-let node1 = new ListNode(5);
-let node2 = new ListNode(6);
-
-node1.next = node2;
-let list = new LinkedList(node1);
-console.log(list);
-console.log(list.size());
+  }
+  
