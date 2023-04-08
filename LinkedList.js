@@ -5,8 +5,18 @@ class ListNode{
     }
 }
 class LinkedList{
-    costructor(head = null){
+    constructor(head = null){
         this.head = head;
+    }
+
+    size(){
+        let count = 0;
+        let node = this.head;
+        while (node){
+            count++;
+            node = node.next;
+        }
+        return count;
     }
 }
 let node1 = new ListNode(5);
@@ -14,5 +24,5 @@ let node2 = new ListNode(6);
 
 node1.next = node2;
 let list = new LinkedList(node1);
-document.write(list.head.next.data);
 console.log(list);
+console.log(list.size());
