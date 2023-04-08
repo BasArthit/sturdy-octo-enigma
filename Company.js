@@ -12,7 +12,6 @@ class PayMoney {
 }
 
 const paym = new PayMoney();
-const cusPay = new LevelCus();
 const money = paym.sumPrice();
 console.log(paym.sumPrice())
 let level;
